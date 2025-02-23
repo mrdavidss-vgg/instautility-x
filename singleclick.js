@@ -1,14 +1,13 @@
+// clicker.js
+(function () {
+    'use strict';
+
     let isClicking = false;
     let clickInterval;
     let cpsCapUnlocked = false;
     let keybind = null;
     let currentX = 0;
     let currentY = 0;
-
-    // Dictionary to store version information
-    const versionInfo = {
-        Version: "X.1" // Default version
-    };
 
     // Load saved data from localStorage
     function loadSavedData() {
@@ -297,3 +296,4 @@
         }
         saveData(); // Save CPS value
     });
+})();
