@@ -3,7 +3,7 @@
     'use strict';
 
     // Dictionary to store feature states
-    const features = {
+    let features = {
         adBlocker: true, // Enabled by default
     };
 
@@ -12,7 +12,7 @@
         try {
             const savedFeatures = localStorage.getItem('instaUtilityFeatures');
             if (savedFeatures) {
-                Object.assign(features, JSON.parse(savedFeatures));
+                features = JSON.parse(savedFeatures);
             }
         } catch (error) {
             console.error('Failed to load saved data:', error);
@@ -167,7 +167,7 @@
 
     // Initialize
     loadSavedData();
-    const { ui, toggleButton } = createUI();
+    const { toggleButton } = createUI();
 
     // Event listeners
     toggleButton.addEventListener('click', () => {
