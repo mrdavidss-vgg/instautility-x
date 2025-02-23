@@ -1,8 +1,3 @@
-// adblocker.js
-(function () {
-    'use strict';
-
-    // List of ad-related selectors
     const adSelectors = [
         'iframe[src*="ads"]',
         'div[class*="ad"]',
@@ -96,4 +91,3 @@
     });
 
     console.log('Universal Ad-Blocker enabled.');
-})();
